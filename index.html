@@ -5,10 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My-Frist-Form</title>
     <style>
-        .cosmetics-form {
+        body {
+            background-image: url(https://i2.pickpik.com/photos/139/702/496/cosmetics-eye-shadow-rouge-brush-preview.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+        input[type=text], input[type=email], input[type=number] {
+            width: 80%;
+            box-sizing: border-box;
+            margin: 8px;
+            padding: 18px;
+            border-radius: 15px;
+        }
+        .date {
+            width: 50%;
+            box-sizing: border-box;
+            margin: 8px;
+            padding: 18px;
+            border-radius: 15px;
+        }
+        input[type=date]:focus {
+            background-color: palevioletred;
+        }
+        input[type=date]:hover {
             background-color: pink;
+        }
+        input[type=text]:focus {
+            background-color: palevioletred;
+        }
+        input[type=text]:hover {
+            background-color: pink;
+        }
+        input[type=email]:focus {
+            background-color: palevioletred;
+        }
+        input[type=email]:hover {
+            background-color: pink;
+        }
+        input[type=number]:focus {
+            background-color: palevioletred;
+        }
+        input[type=number]:hover {
+            background-color: pink;
+        }
+        .cosmetics-form {
+            /* background-color: pink; */
             text-align: center;
-            padding: 15px 0;
+            width: 65%;
+            padding: 25px;
+            background-color: #00000060;
+            margin: 50px auto;
+            border-radius: 5%;
+            border: 1px solid lemonchiffon;
+            box-shadow: 10px 10px 35px white;
         }
         .riaz {
             background-color: blueviolet;
@@ -16,15 +66,17 @@
             padding: 10px 30px;
             border-top-right-radius: 15px;
             border-bottom-left-radius: 15px;
+            margin-top: 10px;
         }
-        .ccc {
+        .cos {
             text-transform: uppercase;
-        }
-        .dd {
-            padding: 5px 10px;
-        }
-        .ddc {
-            padding: 15px 30px;
+            font-size: 50px;
+            color: palevioletred;
+            background-color: #00000040;
+            border: 1px solid lemonchiffon;
+            border-radius: 20%;
+            box-shadow: 8px 8px 18px white;
+
         }
     </style>
 </head>
@@ -32,32 +84,47 @@
     <main>
         <section class="cosmetics-form">
         <form action="">
-            <h1 class="ccc">cosmetics order form</h1>
-            <label for="name">Write your full name</label> <br>
-            <input class="dd" type="text" placeholder="Write your full name" name="" id="name" required>
-            <input class="dd" type="text" placeholder="Last name" required> <br>
+            <h1 class="cos">cosmetics order form</h1>
+            <div class="flexiable-container">
+                <label for="name">Frist name</label> <br>
+                <input type="text" title="Write your First name" placeholder="First name" name="" id="name" required>
+            <input type="text" placeholder="Last name" required>
+            </div>
+            <br>
             <label for="email">Write your email</label> <br>
-            <input class="dd" type="email" placeholder="Write your email" name="" id="email" required> <br>
+            <input type="email" placeholder="Write your email" name="" id="email" required> <br>
             <label for="number">phone number</label> <br>
-            <input class="dd" type="number" name="" id="number" required> <br>
+            <input type="number" name="" id="number" required> <br>
             <label for="abc">Who is the gift for?</label> <br>
-            <input class="dd" type="text" name="" id="abc" required> <br>
+            <input type="text" name="" id="abc" required> <br>
             <label for="abb">What is the occasion?</label> <br>
-            <input class="dd" type="text" name="" id="abb" required> <br>
+            <input type="text" name="" id="abb" required> <br>
             <label for="acc">When do you need it?</label> <br>
-            <input class="dd" type="date" name="" id="acc" required> <br>
+            <input class="date" type="date" name="" id="acc" required> <br>
             <label for="aab">What are the recipient's hobbies and interest's</label> <br>
-            <input class="ddc" type="text" name="" id="aab" required> <br>
-            <h3>Which package suits your budget?</h3> <br>
-            <label for="aaa">Bronze-1000</label> <br>
-            <input type="radio" name="" id="aaa" required> <br>
-            <label for="bbb">Silver-2000</label> <br>
-            <input type="radio" name="" id="bbb" required> <br>
-            <label for="ccc">Gold-3000</label> <br>
-            <input type="radio" name="" id="ccc" required> <br>
-            <label for="ddd">Platinum-5000</label> <br>
-            <input type="radio" name="" id="ddd" required> <br>
-            <input class="riaz" type="submit" value="submit form">
+            <input type="text" name="" id="aab" required> <br>
+            <div class="packages">
+                <h3>Which package suits your budget?</h3> <br>
+                <div class="box">
+                    <div class="package flexiable-container">
+                        <label for="aaa">Bronze-1000</label> <br>
+                        <input type="radio" name="" id="aaa" required> <br>
+                        <div class="package">
+                            <label for="bbb">Silver-2000</label> <br>
+                            <input type="radio" name="" id="bbb" required> <br>
+                        </div>
+                        <div class="package">
+                            <label for="ccc">Gold-3000</label> <br>
+                            <input type="radio" name="" id="ccc" required> <br>
+                        </div>
+                        <div class="package">
+                            <label for="ddd">Platinum-5000</label> <br>
+                            <input type="radio" name="" id="ddd" required> <br>
+                        </div>
+                    </div>
+                    <input class="riaz" type="submit" value="submit form">
+                </div>
+            </div>
         </section>
     </main>
 </body>
